@@ -59,8 +59,10 @@ p {
   background-color: #9b9b9b;
 }
 
-.modal {
-  display: block;
+#modal {
+  background: rgba(150, 150, 150, 50%);
+  top: 0;
+  z-index: 12;
 }
 
 @media (min-width: 650px) {
