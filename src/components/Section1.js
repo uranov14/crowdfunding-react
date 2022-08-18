@@ -2,13 +2,15 @@ import React, {useState} from 'react'
 import mastercraft from '../images/logo-mastercraft.svg'
 import bookmark from '../images/icon-bookmark.svg'
 import bookmarkActive from '../images/icon-bookmark-active.svg'
+import toggleModal from '../toggleModal'
 
 const Section1 = () => {
   const [isMark, setIsMark] = useState(false)
+  
   return (
     <>
         <section className='relative bg-white mx-5 px-5 pb-10 rounded-lg 
-        -mt-20 border-2 lg:w-1/2 lg:mx-auto'>
+        -mt-12 border-2 lg:w-1/2 lg:mx-auto'>
             <img src={mastercraft} alt="" className='mastercraft-logo'/>
             <div className='pt-10 pb-3'>
                 <h2 className='title text-center pb-2'>
@@ -20,7 +22,8 @@ const Section1 = () => {
             </div>
 
             <div className='flex justify-between pt-5'>
-                <button className='btn rounded-full py-1 px-6 text-white'>
+                <button className='btn rounded-full py-1 px-12 text-white font-bold' 
+                onClick={ toggleModal }>
                     Back this project
                 </button>
                 {!isMark ? (

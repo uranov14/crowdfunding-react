@@ -11,7 +11,7 @@ const App = () => {
       
       <Header />
       <Showcase />
-      <Modal/> 
+      <Modal />
       <Section1 />
       <Backers />
       <About />
