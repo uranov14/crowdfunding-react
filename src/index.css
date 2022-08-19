@@ -42,7 +42,8 @@ p {
   transform: translateX(-50%);
 }
 
-.desc {
+.desc,
+.title-pledge:hover {
   color: var(--moderate_cyan);
 }
 
@@ -51,7 +52,8 @@ p {
   margin: 1rem 0;
 }
 
-.data > article:last-child {
+.data > article:last-child,
+.mahogany {
   opacity: .5;
 }
 
@@ -65,6 +67,45 @@ p {
   z-index: 12;
 }
 
+.circle {
+  width: 32px;
+  height: 32px;
+  background-color: hsl(0, 0%, 87%);
+  border-radius: 50%;
+}
+.circle::before {
+  content: "";
+  position: absolute;
+  transform: translate(2px, 2px);
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.circle.select::after {
+  content: "";
+  position: absolute;
+  transform: translate(7px, 7px);
+  width: 18px;
+  height: 18px;
+  background-color: var(--moderate_cyan);
+  border-radius: 50%;
+}
+
+.parag {
+  font-size: .89em;
+}
+
+article {
+  overflow: hidden;
+}
+
+hr {
+  position: relative;
+  right: 10%;
+  width: 120%;
+}
+
 @media (min-width: 650px) {
   .title {
     font-size: 1.75em;
@@ -72,5 +113,9 @@ p {
 
   .mastercraft-logo {
     top: -13%;
+  }
+
+  .parag {
+    font-size: .92em;
   }
 }

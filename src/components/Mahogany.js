@@ -1,44 +1,58 @@
 import React, {useState} from 'react'
 import data from '../data'
+import toggleModal from '../toggleModal'
 
 const Mahogany = () => {
   const card = data[2]
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-        <article key={card.id} className='border-2 p-5 rounded-lg'>
-            <h3 className='font-bold text-lg'>{card.title}</h3>
-            <p className='desc font-bold'>{card.pledge}</p>
-            <p className='my-5'>{card.desc}</p>
-            <div className='md:flex justify-between'>
-                <p className='font-bold text-3xl flex items-center mb-5'>
-                    {card.left} 
-                    <span className='font-light text-base text-gray-600 ml-2'>
-                        left
-                    </span>
-                </p>
-                <button 
-                className='btn py-2 px-6 rounded-full text-white md:px-12 md:h-12' 
-                onClick={() => setIsOpen(!isOpen)}>
-                    {card.button}
-                </button>
+        <article key={card.id} className='mahogany mt-5 border-2 p-5 rounded-lg'>
+            <div className='flex items-center'>
+                <div className='circle'></div>
+                <div className='md:flex items-center pl-4 cursor-pointer'>
+                    <h3 className='font-bold text-lg md:pr-4'
+                    onClick={() => setIsOpen(!isOpen)}>
+                        {card.title}
+                    </h3>
+                    <p className='desc font-bold'>{card.pledge}</p>
+                </div>
+                <div className='hidden md:relative left-20 md:flex items-center'>
+                    <h2 className='font-bold text-3xl text-black'>
+                        {card.left}
+                    </h2>
+                    <p className='ml-2'>left</p>
+                </div>
+            </div>
+            <p className='parag my-5 md:pl-12 md:pr-5'>{card.desc}</p>
+            <div className='flex items-center md:hidden'>
+                <h2 className='font-bold text-3xl text-black'>
+                    {card.left}
+                </h2>
+                <p className='ml-2'>left</p>
             </div>
             {isOpen && (
-                <section>
-                    <hr />
-                    <p>Enter your pledge</p>
-                    <div>
-                        <input 
-                            type='number' 
-                            name="numberInput"
-                            placeholder="$  25"
-                            className="pledge"
-                        />
-                        <button className="continueButton">
-                            Continue
-                        </button>
-                    </div>
-                </section>
+                <>
+                    <hr/>
+                    <section className='md:flex items-center justify-between mt-7'>
+                        <p>Enter your pledge</p>
+                        <div className='flex items-center'>
+                            <div className='border-2 p-3 rounded-full mr-3'>
+                                <input 
+                                    type='number' 
+                                    name="numberInput"
+                                    placeholder="$200"
+                                    className="w-14 mx-2"
+                                />
+                            </div>
+        
+                            <button className="btn py-2 md:py-3 px-6 md:px-6 mt-5 md:mt-0 rounded-full text-white"
+                            onClick={toggleModal}>
+                                Continue
+                            </button>
+                        </div>
+                    </section>
+                </>
             )}
         </article>
     </>
