@@ -11,7 +11,7 @@ const Backers = () => {
                     className='py-2 font-bold text-4xl'>
                         $89,914
                     </h2>
-                    <p>of $100,000 backed</p>
+                    <p>of $120,000 backed</p>
                 </div>
                 <hr className='line md:hidden'/>
                 <div className='flex items-center flex-col md:items-start md:w-1/4 md:border-r md:mr-12'>
@@ -30,7 +30,9 @@ const Backers = () => {
             </div>
             {/* Progress Bar */}
             <div className='w-full bg-gray-200 mt-7 rounded-full'>
-                <p className='btn w-9/12 py-2 rounded-full'></p>
+                <p 
+                id='progress-bar'
+                className='btn w-9/12 py-2 rounded-full'></p>
             </div>
         </section>
     </>

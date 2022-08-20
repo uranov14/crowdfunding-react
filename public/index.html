@@ -16,12 +16,32 @@
       $(document).ready(function(){
         $("#btnGotIt").click(function(){
           let pledgeNoReward = Number($("#pledge-no-reward").val());
+          let pledgeBamboo = Number($("#pledge-bamboo").val());
+          let pledgeBlack = Number($("#pledge-black").val());
           let totalPledge = Number($("#total-pledge").text().substring(1).replace(",", ""));
-          totalPledge += pledgeNoReward;
+          let leftBamboo = Number($("#1").text());
+          let leftBlack = Number($("#2").text());
+          if (!isNaN(pledgeNoReward)) {
+            totalPledge += pledgeNoReward;
+          }
+          if (!isNaN(pledgeBamboo)) {
+            totalPledge += pledgeBamboo;
+            leftBamboo--;
+            $("#1").text(leftBamboo.toString());
+          } 
+          if (!isNaN(pledgeBlack)) {
+            totalPledge += pledgeBlack;
+            leftBlack--;
+            $("#2").text(leftBlack.toString());
+          } 
+  
           let totalBackers = Number($("#total-backers").text().replace(",", ""));
           totalBackers++;
-          $("#total-pledge").text(`$${totalPledge.toString().substring(0, 2)},${totalPledge.toString().substring(2)}`);
+          $("#total-pledge").text(`$${totalPledge.toString().slice(0, -3)},${totalPledge.toString().slice(-3)}`);
           $("#total-backers").text(`${totalBackers.toString().substring(0, 1)},${totalBackers.toString().substring(1)}`);
+          let progress = totalPledge/1200; //proccent of 120.000
+          $("#progress-bar").css("width", `${progress}%`);
+          
         });
       });
     </script>

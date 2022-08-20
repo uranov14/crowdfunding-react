@@ -31,13 +31,13 @@ const PledgeNoReward = () => {
             <section className='md:flex items-center justify-between mt-7'>
                 <p className='flex justify-center pb-4 md:pb-0'>Enter your pledge</p>
                 <div className='flex items-center justify-between'>
-                    <div className='border-2 p-3 rounded-full mr-3'>
-                        <span>$</span>
+                    <div className='flex border-2 p-3 rounded-full mr-3'>
+                        <p>$ &nbsp;&nbsp;</p>
                         <input 
                             id='pledge-no-reward'
                             type='number' 
                             name="numberInput"
-                            className="w-12 mx-3"
+                            className="w-12 mx-1"
                         />
                     </div>
 

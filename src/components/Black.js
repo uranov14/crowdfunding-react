@@ -6,6 +6,7 @@ import toggleFinishModal from '../toggleFinishModal'
 
 const Black = () => {
   const card = data[1]
+  let [left, setLeft] = useState(64)
   const [isOpen, setIsOpen] = useState(false)
   const activePledge = () => {
     const circle = document.getElementById('circle-active-black')
@@ -26,7 +27,7 @@ const Black = () => {
                 </div>
                 <div className='hidden md:relative left-32 md:flex items-center'>
                     <h2 className='font-bold text-3xl text-black'>
-                        {card.left}
+                        {left}
                     </h2>
                     <p className='ml-2'>left</p>
                 </div>
@@ -34,7 +35,7 @@ const Black = () => {
             <p className='parag my-5 md:pl-12 md:pr-5'>{card.desc}</p>
             <div className='flex items-center md:hidden'>
                 <h2 className='font-bold text-3xl text-black'>
-                    {card.left}
+                    {left}
                 </h2>
                 <p className='ml-2'>left</p>
             </div>
@@ -46,17 +47,18 @@ const Black = () => {
                             Enter your pledge
                         </p>
                         <div className='flex items-center justify-between'>
-                            <div className='border-2 p-3 rounded-full mr-3'>
-                                <input 
+                            <div className='flex border-2 p-3 rounded-full mr-3'>
+                                <p>$ &nbsp;&nbsp;<span className='text-black font-bold'>75</span></p>
+                                <input
+                                    id='pledge-black' 
                                     type='number' 
                                     name="numberInput"
-                                    placeholder="$  75"
-                                    className="w-12 mx-3"
+                                    className="w-10 mx-1"
                                 />
                             </div>
         
                             <button className="btn py-3 px-6 md:mt-0 rounded-full text-white"
-                            onClick={ () => {toggleModal(); toggleFinishModal();} }>
+                            onClick={ () => {toggleModal(); toggleFinishModal(); setLeft(--left);} }>
                                 Continue
                             </button>
                         </div>

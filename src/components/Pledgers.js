@@ -18,7 +18,9 @@ const Pledgers = () => {
                         <p className='my-5'>{card.desc}</p>
                         <div className='md:flex justify-between'>
                             <div className='flex items-center'>
-                                <h2 className='font-bold text-3xl text-black'>
+                                <h2 
+                                id={card.id.toString()}
+                                className='font-bold text-3xl text-black'>
                                     {card.left}
                                 </h2>
                                 <p className='ml-2'>left</p>

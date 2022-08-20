@@ -4,6 +4,7 @@ import toggleModal from '../toggleModal'
 import toggleFinishModal from '../toggleFinishModal'
 
 const Bamboo = () => {
+  let [left, setLeft] = useState(101)
   const card = data[0]
   const [isOpen, setIsOpen] = useState(false)
   const activePledge = () => {
@@ -25,7 +26,7 @@ const Bamboo = () => {
                 </div>
                 <div className='hidden md:relative left-40 md:flex items-center'>
                     <h2 className='font-bold text-3xl text-black'>
-                        {card.left}
+                        {left}
                     </h2>
                     <p className='ml-2'>left</p>
                 </div>
@@ -33,7 +34,7 @@ const Bamboo = () => {
             <p className='parag my-5 md:pl-12'>{card.desc}</p>
             <div className='flex items-center md:hidden'>
                 <h2 className='font-bold text-3xl text-black'>
-                    {card.left}
+                    {left}
                 </h2>
                 <p className='ml-2'>left</p>
             </div>
@@ -44,17 +45,19 @@ const Bamboo = () => {
                     <section className='md:flex items-center justify-between mt-7'>
                         <p className='flex justify-center pb-4 md:pb-0'>Enter your pledge</p>
                         <div className='flex items-center justify-between'>
-                            <div className='border-2 p-3 rounded-full mr-3'>
-                                <input 
+                            <div className='flex border-2 p-3 rounded-full mr-3'>
+                                <p>$ &nbsp;&nbsp;<span className='text-black font-bold'>25</span></p>
+                                <input
+                                    id='pledge-bamboo' 
                                     type='number' 
                                     name="numberInput"
-                                    placeholder="$  25"
-                                    className="w-12 mx-3"
+                                    className="w-10 mx-1"
                                 />
                             </div>
         
-                            <button className="btn py-3 px-6 md:mt-0 rounded-full text-white"
-                            onClick={ () => {toggleModal(); toggleFinishModal();} }>
+                            <button 
+                            className="btn py-3 px-6 md:mt-0 rounded-full text-white"
+                            onClick={ () => {toggleModal(); toggleFinishModal(); setLeft(--left);} }>
                                 Continue
                             </button>
                         </div>
