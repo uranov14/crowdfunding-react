@@ -37,12 +37,12 @@ const Mahogany = () => {
                     <section className='md:flex items-center justify-between mt-7'>
                         <p>Enter your pledge</p>
                         <div className='flex items-center'>
-                            <div className='border-2 p-3 rounded-full mr-3'>
+                            <div className='flex border-2 p-3 rounded-full mr-3'>
+                                <p>$ &nbsp;&nbsp;<span className='text-black font-bold'>200</span></p>
                                 <input 
                                     type='number' 
                                     name="numberInput"
-                                    placeholder="$200"
-                                    className="w-14 mx-2"
+                                    className="w-10 mx-1"
                                 />
                             </div>
         

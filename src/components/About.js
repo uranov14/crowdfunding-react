@@ -1,5 +1,5 @@
 import React from 'react'
-import Pledgers from './Pledgers'
+import Pledges from './Pledges'
 
 const About = () => {
 
@@ -25,7 +25,7 @@ const About = () => {
             </div>
 
             {/* Fetch data */}
-            <Pledgers />
+            <Pledges />
         </section>
     </>
   )

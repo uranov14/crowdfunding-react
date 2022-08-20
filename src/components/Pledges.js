@@ -2,7 +2,7 @@ import React from 'react'
 import data from '../data'
 import toggleModal from '../toggleModal'
 
-const Pledgers = () => {
+const Pledges = () => {
   const cards = data
 
   return (
@@ -40,4 +40,4 @@ const Pledgers = () => {
   )
 }
 
-export default Pledgers
+export default Pledges
