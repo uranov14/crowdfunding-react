@@ -11,6 +11,20 @@
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#btnGotIt").click(function(){
+          let pledgeNoReward = Number($("#pledge-no-reward").val());
+          let totalPledge = Number($("#total-pledge").text().substring(1).replace(",", ""));
+          totalPledge += pledgeNoReward;
+          let totalBackers = Number($("#total-backers").text().replace(",", ""));
+          totalBackers++;
+          $("#total-pledge").text(`$${totalPledge.toString().substring(0, 2)},${totalPledge.toString().substring(2)}`);
+          $("#total-backers").text(`${totalBackers.toString().substring(0, 1)},${totalBackers.toString().substring(1)}`);
+        });
+      });
+    </script>
     <title>Crowdfunding Product Page</title>
   </head>
   <body>

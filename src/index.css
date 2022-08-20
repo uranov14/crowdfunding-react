@@ -61,7 +61,8 @@ p {
   background-color: #9b9b9b;
 }
 
-#modal {
+#modal,
+#finishModal {
   background: rgba(150, 150, 150, 50%);
   top: 0;
   z-index: 12;
@@ -104,6 +105,10 @@ hr {
   position: relative;
   right: 10%;
   width: 120%;
+}
+
+.finish {
+  width: 40%;
 }
 
 @media (min-width: 650px) {

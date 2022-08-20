@@ -4,6 +4,7 @@ import Section1 from './components/Section1'
 import Backers from './components/Backers'
 import About from './components/About'
 import Modal from './components/Modal'
+import FinishModal from './components/FinishModal'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Header />
       <Showcase />
       <Modal />
+      <FinishModal />
       <Section1 />
       <Backers />
       <About />

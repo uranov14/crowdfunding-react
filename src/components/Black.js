@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import data from '../data'
 import toggleModal from '../toggleModal'
+import toggleFinishModal from '../toggleFinishModal'
+
 
 const Black = () => {
   const card = data[1]
@@ -40,7 +42,9 @@ const Black = () => {
                 <>
                     <hr className='mt-5 md:mt-0'/>
                     <section className='md:flex items-center justify-between mt-7'>
-                        <p className='flex justify-center pb-4'>Enter your pledge</p>
+                        <p className='flex justify-center pb-4 md:pb-0'>
+                            Enter your pledge
+                        </p>
                         <div className='flex items-center justify-between'>
                             <div className='border-2 p-3 rounded-full mr-3'>
                                 <input 
@@ -52,7 +56,7 @@ const Black = () => {
                             </div>
         
                             <button className="btn py-3 px-6 md:mt-0 rounded-full text-white"
-                            onClick={toggleModal}>
+                            onClick={ () => {toggleModal(); toggleFinishModal();} }>
                                 Continue
                             </button>
                         </div>

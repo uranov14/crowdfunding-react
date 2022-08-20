@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import toggleModal from '../toggleModal'
+import toggleFinishModal from '../toggleFinishModal'
 
 const PledgeNoReward = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -28,19 +29,20 @@ const PledgeNoReward = () => {
           <>
             <hr className='mt-5 md:mt-0'/>
             <section className='md:flex items-center justify-between mt-7'>
-                <p className='flex justify-center pb-4'>Enter your pledge</p>
+                <p className='flex justify-center pb-4 md:pb-0'>Enter your pledge</p>
                 <div className='flex items-center justify-between'>
                     <div className='border-2 p-3 rounded-full mr-3'>
+                        <span>$</span>
                         <input 
+                            id='pledge-no-reward'
                             type='number' 
                             name="numberInput"
-                            placeholder="$"
                             className="w-12 mx-3"
                         />
                     </div>
 
                     <button className="btn py-3 px-6 md:mt-0 rounded-full text-white"
-                    onClick={toggleModal}>
+                    onClick={ () => {toggleModal(); toggleFinishModal(); window.scrollTo(0, 300)} }>
                         Continue
                     </button>
                 </div>
