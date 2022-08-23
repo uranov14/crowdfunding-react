@@ -10,7 +10,7 @@ const Section1 = () => {
   return (
     <>
         <section className='relative bg-white mx-5 px-5 pb-10 rounded-lg 
-        -mt-12 border-2 lg:w-1/2 lg:mx-auto'>
+        -mt-12 md:-mt-24 border-2 lg:w-1/2 lg:mx-auto'>
             <img src={mastercraft} alt="" className='mastercraft-logo'/>
             <div className='pt-12 pb-3'>
                 <h2 className='title text-center pb-2'>
