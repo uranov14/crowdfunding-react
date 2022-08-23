@@ -107,10 +107,6 @@ hr {
   width: 120%;
 }
 
-.finish {
-  width: 40%;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -128,5 +124,9 @@ input::-webkit-inner-spin-button {
 
   .parag {
     font-size: .92em;
+  }
+
+  .finish {
+    width: 40%;
   }
 }

@@ -11,7 +11,7 @@ const Mahogany = () => {
             <div className='flex items-center'>
                 <div className='circle'></div>
                 <div className='md:flex items-center pl-4 cursor-pointer'>
-                    <h3 className='font-bold text-lg md:pr-4'
+                    <h3 className='font-bold text-2sm md:text-lg md:pr-4'
                     onClick={() => setIsOpen(!isOpen)}>
                         {card.title}
                     </h3>
@@ -33,11 +33,11 @@ const Mahogany = () => {
             </div>
             {isOpen && (
                 <>
-                    <hr/>
+                    <hr className='mt-5 md:mt-0'/>
                     <section className='md:flex items-center justify-between mt-7'>
-                        <p>Enter your pledge</p>
+                        <p className='text-center pb-4 md:pb-0'>Enter your pledge</p>
                         <div className='flex items-center'>
-                            <div className='flex border-2 p-3 rounded-full mr-3'>
+                            <div className='flex border-2 px-2 py-3 md:p-3 rounded-full mr-3'>
                                 <p>$ &nbsp;&nbsp;<span className='text-black font-bold'>200</span></p>
                                 <input 
                                     type='number' 
@@ -46,7 +46,7 @@ const Mahogany = () => {
                                 />
                             </div>
         
-                            <button className="btn py-2 md:py-3 px-6 md:px-6 mt-5 md:mt-0 rounded-full text-white"
+                            <button className="btn py-3 px-6 md:mt-0 rounded-full text-white"
                             onClick={toggleModal}>
                                 Continue
                             </button>

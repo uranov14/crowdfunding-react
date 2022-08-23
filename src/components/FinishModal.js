@@ -6,7 +6,7 @@ const FinishModal = () => {
   return (
     <>
         <main  id='finishModal' className='hidden absolute flex justify-center w-full'>
-            <section className='finish relative top-20 bg-white p-5 rounded-lg border-2 mx-5 my-96'>
+            <section className='finish relative -top-60 md:top-20 bg-white p-5 rounded-lg border-2 mx-5 my-96'>
                 <div className='flex flex-col items-center py-7'>
                     <img src={iconCheck} alt="" />
                     <div className='flex flex-col items-center mb-3 md:my-4'>

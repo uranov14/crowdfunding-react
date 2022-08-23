@@ -47,7 +47,7 @@ const Black = () => {
                             Enter your pledge
                         </p>
                         <div className='flex items-center justify-between'>
-                            <div className='flex border-2 p-3 rounded-full mr-3'>
+                            <div className='flex border-2 px-2 py-3 md:p-3 rounded-full mr-3'>
                                 <p>$ &nbsp;&nbsp;<span className='text-black font-bold'>75</span></p>
                                 <input
                                     id='pledge-black' 

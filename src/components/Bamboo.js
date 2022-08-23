@@ -45,7 +45,7 @@ const Bamboo = () => {
                     <section className='md:flex items-center justify-between mt-7'>
                         <p className='flex justify-center pb-4 md:pb-0'>Enter your pledge</p>
                         <div className='flex items-center justify-between'>
-                            <div className='flex border-2 p-3 rounded-full mr-3'>
+                            <div className='flex border-2 px-2 py-3 md:p-3 rounded-full mr-3'>
                                 <p>$ &nbsp;&nbsp;<span className='text-black font-bold'>25</span></p>
                                 <input
                                     id='pledge-bamboo' 
